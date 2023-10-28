@@ -17,7 +17,5 @@ int main() {
 	std::array<char, 2> search;
 	int score = 0;
 
-	while (istream >> search[0] >> search[1]) score += results[search];
-
-	std::cout << score << std::endl;
+	while (istream >> search[0] >> search[1]) std::cout << (score += results[search]) << std::endl;
 }
