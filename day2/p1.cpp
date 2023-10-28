@@ -3,8 +3,9 @@
 #include <sstream>
 #include <map>
 #include <array>
+#include <Benchmark.h>
 
-int main() {
+void fuck() {
 	std::ifstream istream("input");
 
 	(istream.is_open()) ? 0 : (std::cout << "Failed to open file!" << std::endl, exit(1), 1);
@@ -20,5 +21,9 @@ int main() {
 
 	while (istream >> search[0] >> search[1]) score += results[search];
 
-    std::cout << score << std::endl;
+    // std::cout << score << std::endl;
+}
+
+int main() {
+	benchmark(fuck, 50);
 }
